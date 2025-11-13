@@ -1,0 +1,22 @@
+---
+import { cn } from "../lib/utils";
+
+type Props = {
+  size?: "small" | "medium" | "large";
+  className?: string;
+};
+
+const { size = "medium", className } = Astro.props;
+---
+
+<h1
+  class={cn(
+    "font-bold text-zinc-50 leading-tight tracking-tight",
+    size === "small" && "text-4xl sm:text-5xl",
+    size === "medium" && "text-5xl sm:text-6xl",
+    size === "large" && "text-6xl sm:text-7xl md:text-8xl",
+    className
+  )}
+>
+  <slot />
+</h1>

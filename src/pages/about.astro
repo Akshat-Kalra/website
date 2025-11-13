@@ -1,0 +1,152 @@
+---
+import RootLayout from "../layouts/RootLayout.astro";
+import Navigation from "../components/navigation";
+import Link from "../components/link.astro";
+import Footer from "../components/footer.astro";
+import { Image } from "astro:assets";
+
+// Import experience logos
+import ubcLogo from "../assets/ubc-logo.png";
+import subbotsLogo from "../assets/subbots.png";
+---
+
+<RootLayout title="About - Akshat Kalra">
+  <main class="min-h-screen bg-zinc-900">
+    <div class="p-4 sm:p-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center justify-between mb-8">
+          <h1 class="text-4xl sm:text-5xl font-bold text-zinc-50">About</h1>
+          <Navigation client:load>
+            <Link href="/" variant="secondary">Home</Link>
+            <Link href="/projects" variant="secondary">Projects</Link>
+            <Link href="/contact" variant="secondary">Contact</Link>
+          </Navigation>
+        </div>
+
+        <div class="prose prose-invert prose-zinc max-w-none mb-12">
+          <div class="bg-zinc-800 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-zinc-50 mb-4">Hi, I'm Akshat Kalra</h2>
+            <p class="text-zinc-300 mb-4">
+              I'm a third-year Computer Science and Statistics student at the University of British Columbia. 
+              I'm passionate about software development, data science, and machine learning.
+            </p>
+            <p class="text-zinc-300 mb-4">
+              Currently, I'm working as a Software Developer Co-op at UBC Faculty of Forestry and as a 
+              Software and Firmware Developer with UBC Subbots, an Engineering Design Team building an 
+              Autonomous Underwater Vehicle for the RoboSub competition.
+            </p>
+            <p class="text-zinc-300">
+              Contact: <a href="mailto:akalra06@student.ubc.ca" class="text-emerald-400 hover:text-emerald-300">akalra06 [at] student [dot] ubc [dot] ca</a>
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-zinc-50 mb-6">Experience</h2>
+          
+          <div class="space-y-6 mb-12">
+            <div class="bg-zinc-800 rounded-lg p-6">
+              <div class="flex items-start gap-4 mb-4">
+                <Image
+                  src={ubcLogo}
+                  alt="UBC Logo"
+                  class="w-16 h-16 rounded-lg"
+                />
+                <div>
+                  <h3 class="text-xl font-semibold text-zinc-50">Software Developer Co-op</h3>
+                  <p class="text-zinc-400">UBC Faculty of Forestry | Vancouver, BC</p>
+                  <p class="text-sm text-zinc-500">May 2025 – Present</p>
+                </div>
+              </div>
+              <ul class="list-disc list-inside text-zinc-300 space-y-2">
+                <li>Building HelpMe :)</li>
+              </ul>
+            </div>
+
+            <div class="bg-zinc-800 rounded-lg p-6">
+              <div class="flex items-start gap-4 mb-4">
+                <Image
+                  src={subbotsLogo}
+                  alt="UBC Subbots Logo"
+                  class="w-16 h-16 rounded-lg bg-white p-1"
+                />
+                <div>
+                  <h3 class="text-xl font-semibold text-zinc-50">Software and Firmware Developer</h3>
+                  <p class="text-zinc-400">UBC Subbots [Engineering Design Team] | Vancouver, BC</p>
+                  <p class="text-sm text-zinc-500">Sep 2024 – Present</p>
+                </div>
+              </div>
+              <ul class="list-disc list-inside text-zinc-300 space-y-2">
+                <li>Co-leading the Software team developing an Autonomous Underwater Vehicle for the RoboSub competition in California.</li>
+                <li>Spearheading the development of a real-time perception system integrating a custom computer vision model.</li>
+              </ul>
+            </div>
+
+            <div class="bg-zinc-800 rounded-lg p-6">
+              <div class="flex items-start gap-4 mb-4">
+                <Image
+                  src={ubcLogo}
+                  alt="UBC Logo"
+                  class="w-16 h-16 rounded-lg"
+                />
+                <div>
+                  <h3 class="text-xl font-semibold text-zinc-50">Undergraduate Teaching Assistant</h3>
+                  <p class="text-zinc-400">University of British Columbia, Vancouver | Vancouver, BC</p>
+                  <p class="text-sm text-zinc-500">Sep 2023 – Present</p>
+                </div>
+              </div>
+              <ul class="list-disc list-inside text-zinc-300 space-y-2">
+                <li>Current Teaching Assistant for CPSC 121 - Models of Computation [Discrete Mathematics], focusing on proofs, combinations logic circuits, functions, sequential circuits and finite state machines</li>
+                <li>2x TA for PHIL 220 - Symbolic Logic, covering first-order logic and proofs.</li>
+                <li>CPSC 121: Leading a weekly discussion section and co-leading 2 lab sections, facilitating students' understanding of discrete mathematics and computational theory.</li>
+                <li>PHIL 220: Led 2 hours of office hours weekly to support students. Graded 200+ exams and assignments with detailed feedback on logical proofs and reasoning.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold text-zinc-50 mb-6">Skills</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-zinc-800 rounded-lg p-6">
+              <h3 class="text-xl font-semibold text-zinc-50 mb-3">Languages</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">Python</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">Java</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">JavaScript</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">TypeScript</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">C</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">C++</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">R</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">HTML/CSS</span>
+              </div>
+            </div>
+
+            <div class="bg-zinc-800 rounded-lg p-6">
+              <h3 class="text-xl font-semibold text-zinc-50 mb-3">Frameworks & Tools</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">React</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">Next.js</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">Astro</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">Node.js</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">Express</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">Flask</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">TailwindCSS</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">Git</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">MySQL</span>
+                <span class="px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full text-sm">AWS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </main>
+</RootLayout>
+
+<style>
+  .prose h2 {
+    margin-top: 2rem;
+  }
+  .prose ul {
+    margin-left: 1rem;
+  }
+</style>

@@ -1,0 +1,118 @@
+---
+import RootLayout from "../layouts/RootLayout.astro";
+import Navigation from "../components/navigation";
+import Link from "../components/link.astro";
+import Footer from "../components/footer.astro";
+import { Image } from "astro:assets";
+
+// Import project images
+import tranquilo from "../assets/tranquilo.png";
+import airbnb from "../assets/airbnb.png";
+import ecoCircle from "../assets/ecocircle.png";
+import fitLift from "../assets/fitlift.png";
+import website from "../assets/website.png";
+import algoViz from "../assets/algo-viz.png";
+import cat from "../assets/cat.png";
+import titanic from "../assets/titanic.png";
+
+const projects = [
+  {
+    name: "Tranquilo",
+    description: "AI-powered mental health journal that provides therapist-like responses by leveraging Retrieval Augmented Generation (RAG), BERTopic modeling.",
+    image: tranquilo,
+    link: "https://github.com/SaiUbc/Tranquilo",
+    skills: "Next.js | SQLite | Flask | Ngrok | RESTful APIs | BERTopic | RAG"
+  },
+  {
+    name: "Predicting Revenue Impacts of Vancouver's Airbnb Policy",
+    description: "Won 1st Place at the UBC WiDS Case Competition. Developed an end-to-end ML pipeline using scikit-learn, reducing MSE by 27.4% over the baseline.",
+    image: airbnb,
+    link: "https://medium.com/@akshatkalra2005/adapting-to-change-predicting-revenue-impacts-of-vancouvers-airbnb-policies-a35b034716f0",
+    skills: "Scikit-learn | Pandas | NumPy"
+  },
+  {
+    name: "Eco-Circle",
+    description: "Secured 3rd place at the UBC CIC x AWS Gen AI and Sustainability Hackathon. Built an AI-powered marketplace for sustainable buying and upcycling.",
+    image: ecoCircle,
+    link: "https://cic.ubc.ca/2024/10/24/a-look-back-at-cics-generative-ai-and-sustainability-hackathon/",
+    skills: "AWS | Next.js | Python"
+  },
+  {
+    name: "FitTrackr",
+    description: "Java-based fitness tracking app. Logs workouts, visualizes progress, and persists data.",
+    image: fitLift,
+    link: "https://github.com/Akshat-Kalra/FitTrackr",
+    skills: "Java | Swing (GUI) | JUnit5"
+  },
+  {
+    name: "Portfolio Website",
+    description: "Astro-powered portfolio website showcasing projects and skills. Built with Astro 5, React 19, and TailwindCSS 4.",
+    image: website,
+    link: "https://akshatkalra.com",
+    skills: "Astro | React | TailwindCSS"
+  },
+  {
+    name: "Sorting Algorithm Visualizer",
+    description: "Interactive sorting algorithm visualizer with customizable array length and speed. Supports Insertion, Selection, and Bubble Sort.",
+    image: algoViz,
+    link: "https://react-sorting-visualizer-eight.vercel.app/",
+    skills: "ReactJS | HTML | CSS"
+  },
+  {
+    name: "Only Cat Facts",
+    description: "ReactJS-powered cat facts app. Fetches data from APIs, displays cute cat content.",
+    image: cat,
+    link: "https://onlycatfacts.netlify.app/",
+    skills: "ReactJS | HTML | CSS | API Integration"
+  },
+  {
+    name: "Inferential Analysis",
+    description: "Statistical Inference on whether Ticket Classes affected Survival Rates on the RMS Titanic.",
+    image: titanic,
+    link: "https://github.com/Akshat-Kalra/STAT_201_PROJECT",
+    skills: "R | Jupyter Notebook | EDA | Inferential Statistics"
+  }
+];
+---
+
+<RootLayout title="Projects - Akshat Kalra">
+  <main class="min-h-screen bg-zinc-900">
+    <div class="p-4 sm:p-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center justify-between mb-8">
+          <h1 class="text-4xl sm:text-5xl font-bold text-zinc-50">Projects</h1>
+          <Navigation client:load>
+            <Link href="/" variant="secondary">Home</Link>
+            <Link href="/about" variant="secondary">About</Link>
+            <Link href="/contact" variant="secondary">Contact</Link>
+          </Navigation>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {projects.map((project) => (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group relative overflow-hidden rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-all duration-300"
+            >
+              <div class="aspect-video overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div class="p-4">
+                <h3 class="text-xl font-semibold text-zinc-50 mb-2">{project.name}</h3>
+                <p class="text-sm text-zinc-400 mb-3">{project.description}</p>
+                <p class="text-xs font-medium text-emerald-400">{project.skills}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </main>
+</RootLayout>
