@@ -1,9 +1,8 @@
 ---
-import RootLayout from "../layouts/RootLayout.astro";
-import Navigation from "../components/navigation";
-import Link from "../components/link.astro";
-import Footer from "../components/footer.astro";
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
+import H1 from "../components/h1.astro";
+import InfoLayout from "../layouts/InfoLayout.astro";
+import ExternalLink from "../components/external-link.astro";
 
 // Import project images
 import tranquilo from "../assets/tranquilo.png";
@@ -17,102 +16,76 @@ import titanic from "../assets/titanic.png";
 
 const projects = [
   {
-    name: "Tranquilo",
+    title: "Tranquilo",
     description: "AI-powered mental health journal that provides therapist-like responses by leveraging Retrieval Augmented Generation (RAG), BERTopic modeling.",
     image: tranquilo,
-    link: "https://github.com/SaiUbc/Tranquilo",
-    skills: "Next.js | SQLite | Flask | Ngrok | RESTful APIs | BERTopic | RAG"
+    link: "https://github.com/SaiUbc/Tranquilo"
   },
   {
-    name: "Predicting Revenue Impacts of Vancouver's Airbnb Policy",
+    title: "Predicting Revenue Impacts of Vancouver's Airbnb Policy",
     description: "Won 1st Place at the UBC WiDS Case Competition. Developed an end-to-end ML pipeline using scikit-learn, reducing MSE by 27.4% over the baseline.",
     image: airbnb,
-    link: "https://medium.com/@akshatkalra2005/adapting-to-change-predicting-revenue-impacts-of-vancouvers-airbnb-policies-a35b034716f0",
-    skills: "Scikit-learn | Pandas | NumPy"
+    link: "https://medium.com/@akshatkalra2005/adapting-to-change-predicting-revenue-impacts-of-vancouvers-airbnb-policies-a35b034716f0"
   },
   {
-    name: "Eco-Circle",
+    title: "Eco-Circle",
     description: "Secured 3rd place at the UBC CIC x AWS Gen AI and Sustainability Hackathon. Built an AI-powered marketplace for sustainable buying and upcycling.",
     image: ecoCircle,
-    link: "https://cic.ubc.ca/2024/10/24/a-look-back-at-cics-generative-ai-and-sustainability-hackathon/",
-    skills: "AWS | Next.js | Python"
+    link: "https://cic.ubc.ca/2024/10/24/a-look-back-at-cics-generative-ai-and-sustainability-hackathon/"
   },
   {
-    name: "FitTrackr",
+    title: "FitTrackr",
     description: "Java-based fitness tracking app. Logs workouts, visualizes progress, and persists data.",
     image: fitLift,
-    link: "https://github.com/Akshat-Kalra/FitTrackr",
-    skills: "Java | Swing (GUI) | JUnit5"
+    link: "https://github.com/Akshat-Kalra/FitTrackr"
   },
   {
-    name: "Portfolio Website",
+    title: "Portfolio Website",
     description: "Astro-powered portfolio website showcasing projects and skills. Built with Astro 5, React 19, and TailwindCSS 4.",
     image: website,
-    link: "https://akshatkalra.com",
-    skills: "Astro | React | TailwindCSS"
+    link: "https://akshatkalra.com"
   },
   {
-    name: "Sorting Algorithm Visualizer",
+    title: "Sorting Algorithm Visualizer",
     description: "Interactive sorting algorithm visualizer with customizable array length and speed. Supports Insertion, Selection, and Bubble Sort.",
     image: algoViz,
-    link: "https://react-sorting-visualizer-eight.vercel.app/",
-    skills: "ReactJS | HTML | CSS"
+    link: "https://react-sorting-visualizer-eight.vercel.app/"
   },
   {
-    name: "Only Cat Facts",
+    title: "Only Cat Facts",
     description: "ReactJS-powered cat facts app. Fetches data from APIs, displays cute cat content.",
     image: cat,
-    link: "https://onlycatfacts.netlify.app/",
-    skills: "ReactJS | HTML | CSS | API Integration"
+    link: "https://onlycatfacts.netlify.app/"
   },
   {
-    name: "Inferential Analysis",
+    title: "Inferential Analysis",
     description: "Statistical Inference on whether Ticket Classes affected Survival Rates on the RMS Titanic.",
     image: titanic,
-    link: "https://github.com/Akshat-Kalra/STAT_201_PROJECT",
-    skills: "R | Jupyter Notebook | EDA | Inferential Statistics"
+    link: "https://github.com/Akshat-Kalra/STAT_201_PROJECT"
   }
 ];
 ---
 
-<RootLayout title="Projects - Akshat Kalra">
-  <main class="min-h-screen bg-zinc-900">
-    <div class="p-4 sm:p-8">
-      <div class="max-w-7xl mx-auto">
-        <div class="flex items-center justify-between mb-8">
-          <h1 class="text-4xl sm:text-5xl font-bold text-zinc-50">Projects</h1>
-          <Navigation client:load>
-            <Link href="/" variant="secondary">Home</Link>
-            <Link href="/about" variant="secondary">About</Link>
-            <Link href="/contact" variant="secondary">Contact</Link>
-          </Navigation>
-        </div>
+<InfoLayout title="Projects - Akshat Kalra">
+  <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
+    <H1> Projects </H1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {projects.map((project) => (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group relative overflow-hidden rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-all duration-300"
-            >
-              <div class="aspect-video overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-4">
-                <h3 class="text-xl font-semibold text-zinc-50 mb-2">{project.name}</h3>
-                <p class="text-sm text-zinc-400 mb-3">{project.description}</p>
-                <p class="text-xs font-medium text-emerald-400">{project.skills}</p>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-    <Footer />
-  </main>
-</RootLayout>
+    <ul class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8">
+      {projects.map((project) => (
+        <li>
+          <a href={project.link} target="_blank" rel="noopener noreferrer" class="group">
+            <Image 
+              src={project.image} 
+              alt={project.title} 
+              class="aspect-[1/1.33] object-center object-cover rounded-lg shadow-lg mb-4 sm:mb-0 sm:mr-4 transition-transform duration-300 group-hover:scale-105" 
+            />
+            <div class="p-1 sm:p-2">
+              <h2 class="text-base text-zinc-100 group-hover:text-zinc-50">{project.title}</h2>
+              <p class="text-sm text-zinc-400 text-balance">{project.description}</p>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</InfoLayout>
