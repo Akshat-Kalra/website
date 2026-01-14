@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets';
+import H1 from "../components/h1.astro";
+import InfoLayout from "../layouts/InfoLayout.astro";
+import ExternalLink from "../components/external-link.astro";
+
+// Import project images
+import tranquilo from "../assets/tranquilo.png";
+import airbnb from "../assets/airbnb.png";
+import ecoCircle from "../assets/ecocircle.png";
+import fitLift from "../assets/fitlift.png";
+import website from "../assets/website.png";
+import algoViz from "../assets/algo-viz.png";
+import cat from "../assets/cat.png";
+import titanic from "../assets/titanic.png";
+
+const projects = [
+  {
+    title: "Tranquilo",
+    description: "AI-powered mental health journal that provides therapist-like responses by leveraging Retrieval Augmented Generation (RAG), BERTopic modeling.",
+    image: tranquilo,
+    link: "https://github.com/SaiUbc/Tranquilo"
+  },
+  {
+    title: "Predicting Revenue Impacts of Vancouver's Airbnb Policy",
+    description: "Won 1st Place at the UBC WiDS Case Competition. Developed an end-to-end ML pipeline using scikit-learn, reducing MSE by 27.4% over the baseline.",
+    image: airbnb,
+    link: "https://medium.com/@akshatkalra2005/adapting-to-change-predicting-revenue-impacts-of-vancouvers-airbnb-policies-a35b034716f0"
+  },
+  {
+    title: "Eco-Circle",
+    description: "Secured 3rd place at the UBC CIC x AWS Gen AI and Sustainability Hackathon. Built an AI-powered marketplace for sustainable buying and upcycling.",
+    image: ecoCircle,
+    link: "https://cic.ubc.ca/2024/10/24/a-look-back-at-cics-generative-ai-and-sustainability-hackathon/"
+  },
+  {
+    title: "FitTrackr",
+    description: "Java-based fitness tracking app. Logs workouts, visualizes progress, and persists data.",
+    image: fitLift,
+    link: "https://github.com/Akshat-Kalra/FitTrackr"
+  },
+  {
+    title: "Portfolio Website",
+    description: "Astro-powered portfolio website showcasing projects and skills. Built with Astro 5, React 19, and TailwindCSS 4.",
+    image: website,
+    link: "https://akshatkalra.com"
+  },
+  {
+    title: "Sorting Algorithm Visualizer",
+    description: "Interactive sorting algorithm visualizer with customizable array length and speed. Supports Insertion, Selection, and Bubble Sort.",
+    image: algoViz,
+    link: "https://react-sorting-visualizer-eight.vercel.app/"
+  },
+  {
+    title: "Only Cat Facts",
+    description: "ReactJS-powered cat facts app. Fetches data from APIs, displays cute cat content.",
+    image: cat,
+    link: "https://onlycatfacts.netlify.app/"
+  },
+  {
+    title: "Inferential Analysis",
+    description: "Statistical Inference on whether Ticket Classes affected Survival Rates on the RMS Titanic.",
+    image: titanic,
+    link: "https://github.com/Akshat-Kalra/STAT_201_PROJECT"
+  }
+];
+---
+
+<InfoLayout title="Projects - Akshat Kalra">
+  <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
+    <H1> Projects </H1>
+
+    <ul class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8">
+      {projects.map((project) => (
+        <li>
+          <a href={project.link} target="_blank" rel="noopener noreferrer" class="group">
+            <Image 
+              src={project.image} 
+              alt={project.title} 
+              class="aspect-[1/1.33] object-center object-cover rounded-lg shadow-lg mb-4 sm:mb-0 sm:mr-4 transition-transform duration-300 group-hover:scale-105" 
+            />
+            <div class="p-1 sm:p-2">
+              <h2 class="text-base text-zinc-100 group-hover:text-zinc-50">{project.title}</h2>
+              <p class="text-sm text-zinc-400 text-balance">{project.description}</p>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</InfoLayout>

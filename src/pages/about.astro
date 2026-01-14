@@ -1,0 +1,50 @@
+---
+import H1 from "../components/h1.astro";
+import InfoLayout from "../layouts/InfoLayout.astro";
+---
+
+<InfoLayout title="About - Akshat Kalra">
+  <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-between gap-32">
+    <div class="space-y-4 sm:space-y-12">
+      <H1> Get to know Akshat </H1>
+
+      <p class="text-xl xl:text-2xl text-zinc-500 text-balance">
+        I'm a third-year 
+        <span class="text-zinc-400">Computer Science and Statistics</span> 
+        student at the 
+        <a href="https://www.ubc.ca" target="_blank" class="underline underline-offset-4 decoration-zinc-400 hover:text-zinc-50 hover:decoration-zinc-200">
+          University of British Columbia
+        </a>. 
+        I'm passionate about software development, data science, and machine learning.
+      </p>
+
+      <p class="text-xl xl:text-2xl text-zinc-500 text-balance">
+        Currently, I'm working as a <span class="text-zinc-400">Software Developer Co-op</span> at UBC Faculty of Forestry 
+        and as a <span class="text-zinc-400">Software and Firmware Developer</span> with UBC Subbots, an Engineering Design Team 
+        building an Autonomous Underwater Vehicle for the RoboSub competition.
+      </p>
+    </div>
+
+    <div class="space-y-6 sm:space-y-8">
+      <div class="space-y-2 text-base sm:text-lg">
+        <h2 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">Experience</h2>
+
+        <ul class="px-4 text-zinc-400 list-disc list-outside space-y-1">
+          <li>Software Developer Co-op at UBC Faculty of Forestry (May 2025 – Present)</li>
+          <li>Software and Firmware Developer at UBC Subbots (Sep 2024 – Present)</li>
+          <li>Teaching Assistant for CPSC 121 and PHIL 220 at UBC (Sep 2023 – Present)</li>
+        </ul>
+      </div>
+
+      <div class="space-y-2 text-base sm:text-lg">
+        <h2 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">Skills</h2>
+
+        <ul class="px-4 text-zinc-400 list-disc list-outside space-y-1">
+          <li><span class="text-zinc-500">Languages:</span> Python, Java, JavaScript, TypeScript, C, C++, R, HTML/CSS</li>
+          <li><span class="text-zinc-500">Frameworks:</span> React, Next.js, Astro, Node.js, Express, Flask, TailwindCSS</li>
+          <li><span class="text-zinc-500">Tools:</span> Git, MySQL, AWS, Docker</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</InfoLayout>
