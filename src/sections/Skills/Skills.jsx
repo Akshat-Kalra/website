@@ -3,27 +3,27 @@ import styles from "./SkillsStyles.module.css";
 function Skills() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.sectionTitle}>Skills</h1>
-      <div className={styles.skillsGrid}>
+      <h2 className="sectionTitle">SKILLS</h2>
+      <div className={styles.skillsList}>
         <div className={styles.skillCategory}>
-          <span className={styles.skillTitle}>Frontend</span>
-          <span className={styles.skillList}>ReactJS, HTML, CSS, JavaScript, Next.js, Figma, TailwindCSS</span>
+          <h3 className={styles.categoryTitle}>Frontend</h3>
+          <p className={styles.skills}>React · Next.js · HTML · CSS · JavaScript · TailwindCSS · Figma</p>
         </div>
         <div className={styles.skillCategory}>
-          <span className={styles.skillTitle}>Backend</span>
-          <span className={styles.skillList}>Node.js, Express.js, Flask, MySQL, MongoDB, SQLite</span>
+          <h3 className={styles.categoryTitle}>Backend</h3>
+          <p className={styles.skills}>Node.js · Express.js · Flask · MySQL · MongoDB · SQLite</p>
         </div>
         <div className={styles.skillCategory}>
-          <span className={styles.skillTitle}>Programming Languages</span>
-          <span className={styles.skillList}>C, C++, Java, JavaScript, TypeScript, Python, R</span>
+          <h3 className={styles.categoryTitle}>Programming Languages</h3>
+          <p className={styles.skills}>C · C++ · Java · JavaScript · TypeScript · Python · R</p>
         </div>
         <div className={styles.skillCategory}>
-          <span className={styles.skillTitle}>Machine Learning</span>
-          <span className={styles.skillList}>Scikit-learn, NumPy, Pandas, OpenCV</span>
+          <h3 className={styles.categoryTitle}>Machine Learning</h3>
+          <p className={styles.skills}>Scikit-learn · NumPy · Pandas · OpenCV</p>
         </div>
         <div className={styles.skillCategory}>
-          <span className={styles.skillTitle}>Cloud & Tools</span>
-          <span className={styles.skillList}>AWS, Linux, Docker, Git, GitHub, LaTeX, Postman, ROS2</span>
+          <h3 className={styles.categoryTitle}>Cloud & Tools</h3>
+          <p className={styles.skills}>AWS · Linux · Docker · Git · GitHub · LaTeX · Postman · ROS2</p>
         </div>
       </div>
     </div>

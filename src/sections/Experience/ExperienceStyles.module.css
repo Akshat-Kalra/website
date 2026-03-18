@@ -1,113 +1,70 @@
-/* ExperienceStyles.module.css */
-
 .container {
-  padding: 60px 30px;
-  background-color: var(--background-color);
-  text-align: center;
+  padding: clamp(100px, 12vw, 160px) clamp(24px, 5vw, 40px);
   font-family: 'Roboto Mono', monospace;
-}
-
-/* Theme overrides on the container. These variables will cascade to children. */
-.light {
-  --background-color: #ffffff;
-  --text-color: #222222;
-  --form-text-color: #555555;
-  --card-background-color: #ffffff;
-  --card-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-  --card-hover-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.dark {
-  --background-color: var(--background-color);
-  --text-color: #e0e0e0;
-  --form-text-color: #aaaaaa;
-  --card-background-color: #1e1e1e;
-  --card-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  --card-hover-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
-
-.section {
-  margin-bottom: 60px;
-}
-
-.sectionTitle {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .cardsContainer {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  align-items: center;
 }
 
 .card {
-  width: 90%;
-  max-width: 800px;
-  background-color: var(--card-background-color, #fff);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: var(--card-box-shadow, 0 3px 15px rgba(0, 0, 0, 0.1));
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  padding: 40px 0;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color-light);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--card-hover-box-shadow, 0 6px 20px rgba(0, 0, 0, 0.15));
+.card:first-child {
+  padding-top: 0;
+}
+
+.card:last-child {
+  border-bottom: none;
 }
 
 .cardHeader {
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
 }
 
 .cardHeader h3 {
-  margin: 0;
-  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--text-color);
-  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .company {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--form-text-color);
-  margin: 5px 0;
+  margin: 8px 0;
 }
 
 .timeframe {
   font-style: italic;
-  font-size: 0.9rem;
-  color: var(--text-color);
+  font-size: 0.85rem;
+  color: var(--form-text-color);
 }
 
 .detailList {
   list-style-type: disc;
   padding-left: 20px;
   margin: 0;
-  text-align: left;
 }
 
 .detailItem {
-  margin-bottom: 8px;
-  font-size: 1rem;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
   color: var(--text-color);
+  line-height: 1.7;
 }
-
-/* ExperienceStyles.module.css */
-
-/* ...existing styles... */
 
 .logo {
-  max-width: 80px; /* Adjust as needed */
+  max-width: 50px;
   height: auto;
-  margin-bottom: 10px;
-}
-
-.logoUBC {
-  max-width: 100px; /* Adjust as needed */
-  height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
