@@ -50,6 +50,14 @@
   color: var(--form-text-color);
 }
 
+.terms {
+  font-size: 0.8rem;
+  color: var(--form-text-color);
+  opacity: 0.7;
+  margin-top: 6px;
+  letter-spacing: 0.02em;
+}
+
 .detailList {
   list-style-type: disc;
   padding-left: 20px;

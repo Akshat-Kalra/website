@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 import styles from "./ExperienceStyles.module.css";
 import companyLogo from "../../assets/subbots.png";
 import ubclogo from "../../assets/ubc-logo.png";
+import cslogo from "../../assets/ubc-cs-logo.png";
+import phillogo from "../../assets/ubc-phil-logo.png";
 
 function Experience() {
   return (
@@ -9,35 +11,38 @@ function Experience() {
       <h2 className="sectionTitle">EXPERIENCE</h2>
       <div className={styles.cardsContainer}>
         <ExperienceCard
-          title="Software Developer Co-op"
-          company="UBC Faculty of Forestry"
+          title="Software Developer (GenAI) Co-op"
+          company="Faculty of Forestry, UBC"
           logo={ubclogo}
           location="Vancouver, BC"
           timeframe="May 2025 – Present"
-          details={["Building HelpMe :)"]}
-        />
-        <ExperienceCard
-          title="Software and Firmware Developer"
-          company="UBC Subbots [Engineering Design Team]"
-          logo={companyLogo}
-          location="Vancouver, BC"
-          timeframe="Sep 2024 – Present"
           details={[
-            "Co-leading the Software team developing an Autonomous Underwater Vehicle for the RoboSub competition in California.",
-            "Spearheading the development of a real-time perception system integrating a custom computer vision model.",
+            "Built an AI-assisted grading tool end-to-end — AWS serverless backend, LTI 1.3 Canvas integration with automatic grade passback, and an LLM evaluation system benchmarking Claude, Llama 3, and Mistral against instructor grades on 3,500+ submissions.",
+            "Contributed to HelpMe, an open-source LLM-powered course assistant used by 1,500+ students across 40+ courses — built the RAG data pipeline, semantic search with pgvector, and instructor-controlled content filtering.",
           ]}
         />
         <ExperienceCard
-          title="Undergraduate Teaching Assistant"
-          company="University of British Columbia, Vancouver"
+          title="Teaching Assistant — CPSC 121"
+          company="Department of Computer Science, UBC"
+          logo={cslogo}
           location="Vancouver, BC"
-          logo={ubclogo}
-          timeframe="Sep 2023 – Present"
+          timeframe="Jan 2025 – Present (4 terms)"
+          terms="2024W2 · 2025S2 · 2025W1 · 2025W2 — Wolfman, Hosseini, Mochetti, Johnson"
           details={[
-            "Current Teaching Assistant for CPSC 121 - Models of Computation [Discrete Mathematics], focusing on proofs, combinations logic circuits, functions, sequential circuits and finite state machines",
-            "2x TA for PHIL 220 - Symbolic Logic, covering first-order logic and proofs.",
-            "CPSC 121: Leading a weekly discussion section and co-leading 2 lab sections, facilitating students' understanding of discrete mathematics and computational theory.",
-            "PHIL 220: Led 2 hours of office hours weekly to support students. Graded 200+ exams and assignments with detailed feedback on logical proofs and reasoning."
+            "TA for Models of Computation across 4 terms — leading weekly labs, tutorials, and discussion sections covering automata theory, boolean logic, proof techniques, and sequential circuit design.",
+            "Developed original discussion slides and held structured office hours promoting independent problem-solving.",
+          ]}
+        />
+        <ExperienceCard
+          title="Teaching Assistant — PHIL 220"
+          company="Department of Philosophy, UBC"
+          logo={phillogo}
+          location="Vancouver, BC"
+          timeframe="Sep 2023 – Dec 2024 (2 terms)"
+          terms="2023W1 · 2024W1 — Aydede"
+          details={[
+            "TA for Symbolic Logic across 2 terms — graded 200+ assignments and exams with detailed feedback on sentential logic, predicate logic, and formal proof construction.",
+            "Assisted in writing exam questions, held weekly office hours, and maintained the course discussion forum.",
           ]}
         />
       </div>
@@ -45,7 +50,7 @@ function Experience() {
   );
 }
 
-function ExperienceCard({ title, company, logo, location, timeframe, details }) {
+function ExperienceCard({ title, company, logo, location, timeframe, terms, details }) {
   return (
     <div className={styles.card}>
       <div className={styles.cardHeader}>
@@ -57,6 +62,7 @@ function ExperienceCard({ title, company, logo, location, timeframe, details }) 
           {company} {location && `| ${location}`}
         </p>
         <p className={styles.timeframe}>{timeframe}</p>
+        {terms && <p className={styles.terms}>{terms}</p>}
       </div>
       <ul className={styles.detailList}>
         {details.map((detail, index) => (
@@ -75,6 +81,7 @@ ExperienceCard.propTypes = {
   logo: PropTypes.string,
   location: PropTypes.string,
   timeframe: PropTypes.string,
+  terms: PropTypes.string,
   details: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
