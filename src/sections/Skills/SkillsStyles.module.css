@@ -1,70 +1,44 @@
 .container {
-    font-family: 'Roboto Mono', monospace;
-    font-size: small;
-    text-align: center;
-    padding: 30px;
-    padding-top: 80px;
-    background-color: var(--background-color);
-    border-radius: 10px; 
+  padding: clamp(100px, 12vw, 160px) clamp(24px, 5vw, 40px);
+  background-color: var(--background-color);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.sectionTitle {
-    font-family: 'Rubik', sans-serif;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    color: var(--text-color);
-    text-transform: uppercase;
-}
-
-.skillsGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px 48px;
-    max-width: 700px;
-    margin: 0 auto;
-    border-left: 1px solid #e0e0e0;
-    padding-left: 32px;
-    text-align: left;
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 6vw, 70px);
+  max-width: 700px;
 }
 
 .skillCategory {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color-light);
 }
 
-.skillTitle {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 2px;
-    color: var(--text-color);
-    font-family: 'Roboto Mono', monospace;
+.skillCategory:last-child {
+  border-bottom: none;
 }
 
-.skillList {
-    font-size: 1rem;
-    color: var(--text-color);
-    font-family: 'Roboto Mono', monospace;
-    opacity: 0.95;
+.categoryTitle {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--form-text-color);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 0;
 }
 
-@media (max-width: 800px) {
-    .skillsGrid {
-        grid-template-columns: 1fr;
-        padding-left: 0;
-        border-left: none;
-    }
+.skills {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  font-weight: 300;
+  margin: 0;
 }
-
-/* Remove old styles */
-.textSkillsContainer {}
-.textSkillGroup {}
-.textSkillTitle {}
-.technologyContainer {}
-.skillContainer {}
-.skillCard {}
-.skillIconContainer {}
-.skillIcon {}
-h3 {}
