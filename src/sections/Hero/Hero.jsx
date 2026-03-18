@@ -20,7 +20,7 @@ function Hero() {
         </h1>
 
         <p className={styles.subtitle}>
-          Third Year CS & Statistics @ UBC
+          Fourth Year CS & Statistics @ UBC
         </p>
 
         <div className={styles.links}>

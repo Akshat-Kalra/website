@@ -54,7 +54,8 @@
   transition: color 200ms ease-in-out;
 }
 
-.links a:hover {
+.links a:hover,
+.links a:focus-visible {
   color: var(--accent-color);
 }
 

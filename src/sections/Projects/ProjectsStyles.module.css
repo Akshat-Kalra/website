@@ -41,7 +41,8 @@
   transition: color 200ms ease-in-out;
 }
 
-.featuredCard:hover h3 {
+.featuredCard:hover h3,
+.featuredCard:focus-visible h3 {
   color: var(--accent-color);
 }
 
@@ -86,7 +87,8 @@
   transition: color 200ms ease-in-out;
 }
 
-.compactCard:hover h3 {
+.compactCard:hover h3,
+.compactCard:focus-visible h3 {
   color: var(--accent-color);
 }
 

@@ -36,6 +36,11 @@ function Navbar() {
           </Link>
         </li>
         <li>
+          <Link to="education" smooth={true} duration={500}>
+            Education
+          </Link>
+        </li>
+        <li>
           <Link to="experience" smooth={true} duration={500}>
             Experience
           </Link>
@@ -60,7 +65,11 @@ function Navbar() {
         src={themeIcon}
         className="themeToggle"
         onClick={toggleTheme}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleTheme(); } }}
         alt="Toggle theme"
+        role="button"
+        tabIndex={0}
+        aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
       />
     </nav>
   );

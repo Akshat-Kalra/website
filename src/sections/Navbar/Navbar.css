@@ -45,9 +45,11 @@
   letter-spacing: 0.08em;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a:focus-visible {
   cursor: pointer;
   color: var(--accent-color);
+  outline: none;
 }
 
 .navbar a::after {
@@ -62,7 +64,8 @@
   transition: transform 200ms ease-in-out;
 }
 
-.navbar a:hover::after {
+.navbar a:hover::after,
+.navbar a:focus-visible::after {
   transform: translateX(-50%) scaleX(1);
 }
 

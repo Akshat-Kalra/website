@@ -2,31 +2,31 @@ import styles from "./SkillsStyles.module.css";
 
 function Skills() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <h2 className="sectionTitle">SKILLS</h2>
       <div className={styles.skillsList}>
         <div className={styles.skillCategory}>
-          <h3 className={styles.categoryTitle}>Frontend</h3>
-          <p className={styles.skills}>React · Next.js · HTML · CSS · JavaScript · TailwindCSS · Figma</p>
+          <h3 className={styles.categoryTitle}>Languages</h3>
+          <p className={styles.skills}>Python · C/C++ · TypeScript · Java · Rust · SQL (PostgreSQL) · R · HTML/CSS · Racket</p>
         </div>
         <div className={styles.skillCategory}>
-          <h3 className={styles.categoryTitle}>Backend</h3>
-          <p className={styles.skills}>Node.js · Express.js · Flask · MySQL · MongoDB · SQLite</p>
+          <h3 className={styles.categoryTitle}>Full-Stack</h3>
+          <p className={styles.skills}>React.js · Next.js · Nest.js · Node.js · FastAPI · Flask</p>
         </div>
         <div className={styles.skillCategory}>
-          <h3 className={styles.categoryTitle}>Programming Languages</h3>
-          <p className={styles.skills}>C · C++ · Java · JavaScript · TypeScript · Python · R</p>
+          <h3 className={styles.categoryTitle}>Machine Learning & AI</h3>
+          <p className={styles.skills}>Scikit-Learn · PyTorch · Neural Networks · AWS Bedrock · Automated Evaluation for AI Systems</p>
         </div>
         <div className={styles.skillCategory}>
-          <h3 className={styles.categoryTitle}>Machine Learning</h3>
-          <p className={styles.skills}>Scikit-learn · NumPy · Pandas · OpenCV</p>
+          <h3 className={styles.categoryTitle}>Data Science & Analytics</h3>
+          <p className={styles.skills}>Pandas · NumPy · Matplotlib · Statistical Validation</p>
         </div>
         <div className={styles.skillCategory}>
-          <h3 className={styles.categoryTitle}>Cloud & Tools</h3>
-          <p className={styles.skills}>AWS · Linux · Docker · Git · GitHub · LaTeX · Postman · ROS2</p>
+          <h3 className={styles.categoryTitle}>Cloud & Infrastructure</h3>
+          <p className={styles.skills}>AWS (Bedrock, Lambda, S3, DynamoDB, API Gateway) · Docker · Linux</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
