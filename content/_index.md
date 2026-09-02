@@ -2,19 +2,26 @@
 
 ## experience
 
-software developer (genai), faculty of forestry, ubc — 2025–present
+<span class="role">data science co-op @ atreides</span> | may 2026 – present
 
-- ai-assisted grading: aws serverless, lti 1.3 canvas, llm eval on 3,500+ submissions
-- helpme: rag pipeline, pgvector search, instructor content filtering (1,500+ students)
+- geospatial intelligence
 
-teaching assistant, cpsc 121, ubc — 2025–present
+<span class="role">software developer @ faculty of forestry, ubc</span> | may 2025 – apr 2026
 
-- labs and tutorials: automata, logic, proofs, sequential circuits
+- ai-assisted grading
 
-teaching assistant, phil 220, ubc — 2023–2024
+<span class="role">computer science teaching assistant, ubc</span> | 2025 – present
 
-- graded 200+ assignments; office hours and exam writing
+- cpsc 210 (software construction in typescript)
+- cpsc 121 (discrete math and proofs) · 5 terms
+
+<span class="role">philosophy teaching assistant, ubc</span> | 2023 – 2024
+
+- phil 220 (symbolic logic) · 2 terms
 
 ## education
 
-bsc computer science & statistics, ubc — 2027
+bsc computer science & statistics, ubc | 2027
+- dean's list
+- international student scholar (x2)
+- ois scholar

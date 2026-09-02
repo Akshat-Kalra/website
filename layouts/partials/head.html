@@ -18,5 +18,8 @@
   {{ $sass := resources.Get "css/main.scss" }}
   {{ $style := $sass | css.Sass $options | resources.Fingerprint "sha512" }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
+  <style>
+    .role { text-decoration: underline; text-underline-offset: 0.15em; }
+  </style>
   {{ if .Params.mathjax }} {{ partial "mathjax.html" . }} {{ end }}
 </head>
