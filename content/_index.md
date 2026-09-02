@@ -6,14 +6,14 @@
 
 - geospatial intelligence
 
-<span class="role">software developer @ faculty of forestry, ubc</span> | may 2025 – apr 2026
-
-- ai-assisted grading
-
 <span class="role">computer science teaching assistant, ubc</span> | 2025 – present
 
 - cpsc 210 (software construction in typescript)
 - cpsc 121 (discrete math and proofs) · 5 terms
+
+<span class="role">software developer @ faculty of forestry, ubc</span> | may 2025 – apr 2026
+
+- ai-assisted grading
 
 <span class="role">philosophy teaching assistant, ubc</span> | 2023 – 2024
 
