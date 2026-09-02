@@ -2,7 +2,7 @@
 
 ## experience
 
-<span class="role">data science co-op @ atreides</span> | may 2026 – present
+<a class="role" href="/experience/atreides/">data science co-op @ atreides</a> | may 2026 – present
 
 - geospatial intelligence
 

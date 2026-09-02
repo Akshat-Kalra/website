@@ -20,6 +20,35 @@
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
   <style>
     .role { text-decoration: underline; text-underline-offset: 0.15em; }
+    @media (max-width: 640px) {
+      .w {
+        padding: calc(2.25rem + env(safe-area-inset-top, 0px)) 1.25rem 3rem;
+      }
+      h1 { margin-top: 0; }
+    }
+    body[a] a.role,
+    body[a] a.role:link,
+    body[a] a.role:visited,
+    body[a] a.role:hover,
+    body[a] a.role:active {
+      color: #000;
+    }
+    @media (prefers-color-scheme: dark) {
+      body[a="auto"] a.role,
+      body[a="auto"] a.role:link,
+      body[a="auto"] a.role:visited,
+      body[a="auto"] a.role:hover,
+      body[a="auto"] a.role:active {
+        color: #fff;
+      }
+    }
+    body[a="dark"] a.role,
+    body[a="dark"] a.role:link,
+    body[a="dark"] a.role:visited,
+    body[a="dark"] a.role:hover,
+    body[a="dark"] a.role:active {
+      color: #fff;
+    }
   </style>
   {{ if .Params.mathjax }} {{ partial "mathjax.html" . }} {{ end }}
 </head>
