@@ -1,0 +1,24 @@
+baseURL = "https://akshatkalra.com/"
+title = "akshat kalra"
+theme = "nostyleplease"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS", "section"]
+
+[params]
+  description = "cs & statistics, ubc"
+  favicon = "letter_a.svg"
+
+  [params.theme_config]
+    appearance = "auto"
+    back_home_text = "← home"
+    date_format = "2006-01-02"
+    isListGroupByDate = false
+    isShowFooter = false
+    show_description = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
