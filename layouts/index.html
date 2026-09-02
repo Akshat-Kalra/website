@@ -1,9 +1,16 @@
 {{ define "main" }}
-<header>
-    <h1>{{ $.Site.Title }}</h1>
-    {{- if $.Site.Params.theme_config.show_description -}}
-        <p>{{ $.Site.Params.description }}</p>
-    {{- end -}}
+<header class="mast">
+    <div>
+        <h1>{{ $.Site.Title }}</h1>
+        {{- if $.Site.Params.theme_config.show_description -}}
+            <p>{{ $.Site.Params.description }}</p>
+        {{- end -}}
+    </div>
+    <pre class="cats" aria-hidden="true">  ╱|、
+ (˚ˎ 。7    ╱|、
+  |、˜〵   (˚ˎ 。7
+ じしˍ,)ノ  |、˜〵
+           じしˍ,)ノ</pre>
 </header>
 {{ .Content }}
 {{ end }}
